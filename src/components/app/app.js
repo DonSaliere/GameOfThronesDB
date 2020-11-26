@@ -9,7 +9,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import './app.css';
 
-
 export default class App extends Component {
 
     gotService = new gotService();
@@ -38,13 +37,12 @@ export default class App extends Component {
         if (this.state.error) {
             return <ErrorMessage />
         }
-        const char = this.state.showRandomChar ? <RandomChar /> : null;
+        const char = this.state.showRandomChar ? <RandomChar interval={1500} /> : null;
         return (
             <Router>
                 <div className="app">
                     <Container>
                         <Header />
-
                     </Container>
                     <Container>
                         <Row>
